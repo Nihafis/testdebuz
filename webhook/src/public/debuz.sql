@@ -29,8 +29,7 @@ CREATE TABLE IF NOT EXISTS `subscriber` (
 
 -- Dumping data for table debuz.subscriber: ~1 rows (approximately)
 INSERT INTO `subscriber` (`sub_id`, `url`, `secret`) VALUES
-	(2, 'http://localhost:8000/receive', '3966844df64a681dfbaf2a6f62f215c9e68f438eef5e2a4504f1f95a55879828'),
-	(9, 'http://localhost:3000/receive', '774af743fa583d4d3c7a12c383b17044b906f55dd605106fcf803683930e11f3');
+	(2, 'http://localhost:8000/receive', '3966844df64a681dfbaf2a6f62f215c9e68f438eef5e2a4504f1f95a55879828');
 
 -- Dumping structure for table debuz.subscribe_data
 CREATE TABLE IF NOT EXISTS `subscribe_data` (
