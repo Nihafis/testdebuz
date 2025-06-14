@@ -7,6 +7,7 @@ A TypeScript-based webhook API built with Fastify, Redis, and MySQL.
 - Node.js (v14 or higher)
 - MySQL Server
 - Redis Server
+- Fastify
 
 ## Setup
 
@@ -18,72 +19,40 @@ A TypeScript-based webhook API built with Fastify, Redis, and MySQL.
 
 3. Create a `.env` file in the root directory with the following variables:
    ```
-   PORT=3000
-   HOST=localhost
-   JWT_SECRET=your-super-secret-key
-   JWT_EXPIRES_IN=1h
-   REDIS_HOST=localhost
-   REDIS_PORT=6379
-   MYSQL_HOST=localhost
-   MYSQL_PORT=3306
-   MYSQL_USER=root
-   MYSQL_PASSWORD=your-password
-   MYSQL_DATABASE=webhook_db
+HOST=localhost
+REDIS_HOST=localhost
+REDIS_PORT=6379
+
+MYSQL_HOST=127.0.0.1
+MYSQL_PORT=3306
+MYSQL_USER=root
+MYSQL_PASSWORD=
+MYSQL_DATABASE=debuz
+
+JWT_SECRET=supersecret
+
+PORT=3000
+HOTS=localhost
    ```
 
 4. Set up the database:
    ```bash
-   mysql -u root -p < src/schema.sql
+   mysql -u root -p < src/public/debuz.sql
    ```
 
-## Development
+## Run
 
-Run the development server:
+Run the Run server:
 ```bash
+cd webhook
+npm run dev
+cd reciever
 npm run dev
 ```
 
-## Production
 
-Build the project:
-```bash
-npm run build
-```
 
-Start the production server:
-```bash
-npm start
-```
 
-## API Endpoints
-
-### POST /webhook
-Send a webhook event.
-
-Headers:
-```
-Authorization: Bearer <your-jwt-token>
-```
-
-Request body:
-```json
-{
-  "event": "user.created",
-  "data": {
-    "userId": "123",
-    "email": "user@example.com"
-  },
-  "timestamp": "2023-12-01T12:00:00Z"
-}
-```
-
-### GET /webhooks
-Retrieve the latest webhooks.
-
-Headers:
-```
-Authorization: Bearer <your-jwt-token>
-```
 
 ## Features
 
