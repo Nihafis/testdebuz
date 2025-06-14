@@ -18,7 +18,7 @@ A TypeScript-based webhook API built with Fastify, Redis, and MySQL.
    ```
 
 3. Create a `.env` file in the root directory with the following variables:
-   ```
+ ```bash
 HOST=localhost
 REDIS_HOST=localhost
 REDIS_PORT=6379
