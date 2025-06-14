@@ -9,7 +9,7 @@ const subScribeRoute = async (fastify: FastifyInstance) => {
   fastify.post("/subScribe", {
   }, subScribeController);
   fastify.post("/unsubScribe", {
-    preHandler: jwtAuthMiddleware,
+    // preHandler: jwtAuthMiddleware,
   }, unsubScribeController);
 };
 
